@@ -22,6 +22,26 @@ const getOneUser = (userId) => {
   }
 }
 
+const getOneUserByUsername = (username) => {
+  console.log(username)
+  try{
+    const userId = db.users.findIndex(user => user.username === username)
+    if (userId === -1) {
+      throw {
+        status: 400,
+        message: 'El usuario no existe'
+      }
+    }
+    return db.users[userId]
+  } catch(error){
+    console.log(error)
+    throw {
+      status: error?.status || 500, message: error?.message || error
+    }
+  }
+
+}
+
 const createNewUser = (newUser) => {
    try{
      const userExist = db.users.findIndex(user => user.username === newUser.username)
@@ -88,4 +108,4 @@ const deleteOneUser = (userId) => {
   }
 }
 
-export { getAllUsers, getOneUser, createNewUser, updateOneUser, deleteOneUser } 
+export { getAllUsers, getOneUser, getOneUserByUsername, createNewUser, updateOneUser, deleteOneUser } 
