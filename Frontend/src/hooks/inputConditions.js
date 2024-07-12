@@ -1,6 +1,6 @@
 export const validateUsername = (username) => {
   console.log(username)
-  if (username.length > 20) {
+  if (username.length > 30) {
     return { isValid: false, errorMessage: 'El username no puede tener más de 20 caracteres' }
   }
 
