@@ -1,5 +1,7 @@
-import { db } from './db.json'
+import db from './db.json' with { type: "json" }
 
 const getAllUsers = () => {
-  return db
+  return db.users
 }
+
+export { getAllUsers }
