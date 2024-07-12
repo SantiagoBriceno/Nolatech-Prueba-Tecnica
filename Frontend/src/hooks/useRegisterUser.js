@@ -4,6 +4,7 @@ import { validateUsername, validatePassword } from './inputConditions'
 export const useRegisterUser = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [name, setName] = useState('')
   const [confirmUsername, setConfirmUsername] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
 
@@ -24,6 +25,9 @@ export const useRegisterUser = () => {
         break
       case 'confirmPassword':
         setConfirmPassword(value)
+        break
+      case 'nombre':
+        setName(value)
         break
       default:
         break

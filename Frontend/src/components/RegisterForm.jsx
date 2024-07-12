@@ -13,6 +13,12 @@ export default function () {
         <hr />
         <form className='register-form'>
           <div className='input-container'>
+            <p>Ingresa tu nombre</p>
+            <MyInput
+              id='nombre' placeholder='Jacinto' onChange={handleChange}
+            />
+          </div>
+          <div className='input-container'>
             <p>Ingresa una dirección de correo válido / Username <span>(8-20 caracteres / sin espacios )</span> </p>
             <MyInput id='username' onChange={handleChange} placeholder='Example123' type='text' name='username' validation={validationUsername} />
             <MyInput id='confirmUsername' onChange={handleChange} placeholder='Confirmar Username o correo' type='text' name='confirmUsername' />
