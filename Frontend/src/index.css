@@ -1,0 +1,454 @@
+:root {
+  --text-type: Sans-serif;
+  --text-color-back: white;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--text-type);
+  margin: 0px;
+  margin-block-start: 0px !important;
+  margin-block-end: 0px !important;
+}
+
+header {
+  height: 40px;
+  background-color: #03B044;
+}
+
+header>div {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+
+header>div>span {
+  margin-left: 16px;
+  color: var(--text-color-back);
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+}
+
+header>div>.isLive {
+  height: 100%;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: red;
+  text-transform: uppercase;
+}
+
+.to-login {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-left: 12px;
+}
+
+
+.to-login:hover {
+  background-color: #07913B;
+  box-shadow: 20px;
+  cursor: pointer;
+}
+
+nav {
+  width: 100%;
+}
+
+.headerNav {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.iconHeadernNav {
+  object-fit: contain;
+  max-width: 200px;
+  max-height: 120px;
+}
+
+.Navbackground {
+  z-index: -1;
+  width: 100%;
+  object-fit: cover;
+  max-height: 600px;
+  position: absolute;
+}
+
+.routeNav {
+  display: flex;
+  height: 120px;
+  gap: 16px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.routeNav>.route {
+  color: var(--text-color-back);
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none !important;
+}
+
+.contentNavBody {
+  display: flex;
+  flex-direction: column;
+  margin-right: 105px;
+}
+
+.bodyNav {
+  margin-left: 0px;
+}
+
+.bodyNavTitle {
+  font-size: 46px;
+  color: var(--text-color-back);
+  font-weight: bold;
+}
+
+.bodyNavTitle2 {
+  font-size: 46px;
+  max-width: fit-content;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.bodyNavButton {
+  padding: 16px;
+  background-color: #03B044;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 12px;
+}
+
+.footerNav {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5.5%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 160px;
+  background-color: #025923;
+}
+
+.footerContenTextNav {
+  font-size: 32px;
+  color: var(--text-color-back);
+  font-weight: bold;
+  padding: 0 189px;
+  width: 20%;
+}
+
+.footerContenTimeNav {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.blockTime {
+  color: var(--text-color-back);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blockTime>span {
+  font-size: 64px;
+}
+
+.blockTitle {
+  margin-block-start: 0xp !important;
+  margin-block-end: 0xp !important;
+}
+
+.divider {
+  border-top: 3px solid #028433;
+}
+
+.blockSpan {
+  font-size: 26px !important;
+  color: #03B044 !important;
+}
+
+.firtsCard {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.textFirst {
+  width: 48%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.textFirst>h1 {
+  font-size: 56px;
+}
+
+.textFirst>p {
+  font-size: 24px;
+}
+
+.imageFirstCard {
+  object-fit: cover;
+  width: 38%;
+}
+
+.secondCard {
+  background: #F5F6FA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.secondCardContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 5%;
+}
+
+.btnCard {
+  background-color: #03B044;
+  color: white;
+  font-size: 26px;
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.cardImage {
+  object-fit: cover;
+  max-height: 300px;
+  max-width: 600px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.btnSecondCard {
+  margin-top: 2.5%;
+  margin-bottom: 5%;
+  border-radius: 5px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 36px;
+  padding-right: 36px;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+
+}
+
+.threeCard {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #03B044;
+  justify-content: center;
+  gap: 15%;
+  max-height: 480px;
+}
+
+.threeCardContent {
+  width: 30%;
+}
+
+.textCardThree {
+  font-size: 48px;
+  color: white;
+  padding: 16px;
+  font-weight: bold;
+
+}
+
+.btnThreeCard {
+  margin-top: 16px;
+  border-radius: 5px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: black;
+  background-color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.btnThreeCard2 {
+  margin-top: 16px;
+  border-radius: 10px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: white;
+  background-color: transparent;
+  border-color: white;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+
+}
+
+.threeCardImage {
+  object-fit: fill;
+  width: 35%;
+}
+
+.fourCard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.fourCardContent {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15%
+}
+
+.fourCardFile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnFourCard {
+  padding: 16px;
+  border: none;
+  color: white;
+  margin-top: 2.5%;
+  background-color: #03B044;
+  border-radius: 10px;
+  font-size: 24px;
+  padding-left: 46px;
+  padding-right: 46px;
+  font-weight: bold;
+}
+
+.btnStandar {
+  padding: 16px;
+  border: none;
+  color: white;
+  background-color: #03B044;
+  border-radius: 10px;
+  font-size: 24px;
+  padding-left: 46px;
+  padding-right: 46px;
+  font-weight: bold;
+}
+
+.fiveCard {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  height: 100%;
+  margin-bottom: 6.7%;
+}
+
+.formFiveCard {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 5%;
+}
+
+.inputFormBasic {
+  border: none;
+  border-radius: 10px;
+  margin: 2%;
+  height: 45px;
+  padding-left: 16px;
+}
+
+.sixCard {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  min-height: 600px;
+}
+
+.sevenCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  background-color: #026749;
+}
+
+.menuLateral {
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  position: fixed;
+  background-color: gray;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  width: 30px;
+  top: 150px;
+  right: 0;
+}
+
+footer {
+  padding: 2.5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer p {
+  font-weight: bold;
+  width: 300px;
+  text-align: left
+}
+
+footer .md {
+  width: 300px;
+}
+
+footer .sm {
+  width: 200px;
+}
+
+footer img {
+  width: 200px
+}

@@ -1,0 +1,142 @@
+/* <div className='container'>
+
+      <div className='encabezado'>
+        <h1>Iniciar Sesión</h1>
+      </div>
+
+      <div className='form-container'>
+        <form>
+          <div className='form-group'>
+            <MyInput label='Username' type='text' name='username' />
+          </div>
+          <div className='form-group'>
+            <MyInput label='Password' type='password' name='password' />
+          </div>
+          <button type='submit' className='btn btn-primary'>Submit</button>
+        </form>
+      </div>
+
+    </div> */
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  height: 100vh;
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #F2F2F2;
+}
+
+.encabezado {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-container p {
+  font-size: 12px;
+  color: #333;
+  margin: 0;
+
+}
+
+.input-container p span {
+  color: rgb(221, 125, 125);
+}
+
+input {
+  width: 95%;
+  background-color: #EBEBEB;
+  padding: 15px 0px;
+  padding-left: 5%;
+  border: 0px solid #ccc;
+  border-radius: 20px;
+  background: #DAE0EB;
+}
+
+.errorMsg {
+  color: red;
+  font-size: 12px;
+  text-align: left;
+  padding-left: 25px;
+}
+
+.recuperar {
+  color: black;
+  font-size: 12px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.recuperar:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #03B044;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #07913B;
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-footer p,
+a {
+  text-align: center;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  height: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}

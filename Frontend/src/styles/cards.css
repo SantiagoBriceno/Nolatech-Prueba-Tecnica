@@ -1,0 +1,141 @@
+.secondCard h1 {
+  font-size: 56px;
+}
+
+.secondCard p {
+  width: 50%;
+  text-align: center
+}
+
+.fourCard h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.fourCard img {
+  object-fit: cover;
+  max-width: 250px
+}
+
+.fourCard i {
+  position: absolute;
+  color: white;
+}
+
+.fourCard .fourCardContent .fourCardFile p {
+  margin-top: 5%
+}
+
+.fiveCard img {
+  position: absolute;
+  width: 100%;
+  object-fit: fill;
+  z-index: -1;
+  max-height: 800px;
+}
+
+.fiveCard .join-us {
+  font-size: 56px;
+  font-weight: bold;
+  color: white;
+  margin: 2%;
+}
+
+.fiveCard .subtitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  margin: 2%;
+}
+
+.fiveCard p {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  margin-top: 2%;
+  margin-left: 2%;
+  text-align: center;
+}
+
+.fiveCard div {
+  display: flex;
+}
+
+.fiveCard .variant-1 {
+  margin-right: 0px;
+  width: 100%;
+}
+
+.fiveCard .variant-2 {
+  width: 100%;
+}
+
+.fiveCard textarea {
+  height: 120px;
+  padding-top: 16px;
+}
+
+.fiveCard button {
+  max-width: fit-content;
+  margin: 2%;
+}
+
+.sixCard img {
+  position: absolute;
+  width: 100%;
+  object-fit: fill;
+  z-index: -1;
+  max-height: 600px;
+}
+
+.sixCard div {
+  width: 40%;
+  margin-left: 5%;
+  margin-top: 10%
+}
+
+.sixCard h1 {
+  font-size: 56px;
+}
+
+.sixCard p {
+  width: 25;
+}
+
+.sixCard div button {
+  margin-top: 10%;
+}
+
+.sevenCard h1 {
+  font-size: 56px;
+  color: white;
+}
+
+.sevenCard .first {
+  display: flex;
+  gap: 5%;
+}
+
+.sevenCard .first img {
+  object-fit: fill;
+  width: 300px;
+  height: 400px;
+}
+
+.sevenCard .second {
+  display: flex;
+  margin-top: 2%;
+  width: 100%;
+  justify-content: center;
+  gap: 2%;
+}
+
+.sevenCard .second i {
+  color: white;
+}
+
+.sevenCard button {
+  color: black;
+  background-color: white;
+  margin-top: 5%
+}
