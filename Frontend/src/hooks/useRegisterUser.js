@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { validateUsername, validatePassword } from './inputConditions'
+import { createUser } from '../service/user'
 
 export const useRegisterUser = () => {
   const [username, setUsername] = useState('')
@@ -54,8 +55,29 @@ export const useRegisterUser = () => {
   // Aqui validaremos que los campos sean iguales en confirmUsername y confirmPassword a username y password respectivamente
   const handleSubmit = (e) => {
     e.preventDefault()
+    const user = {
+      username,
+      password,
+      name
+    }
+
     if (username === confirmUsername && password === confirmPassword) {
-      window.alert('Usuario registrado correctamente')
+      // Verificamos que username tenga más de 8 caracteres y menos de 30
+      if (username.length < 8 || username.length > 30) {
+        window.alert('El username debe tener entre 8 y 30 caracteres')
+      } else if (password.length < 8) {
+        window.alert('La contraseña debe tener al menos 8 caracteres')
+      } else if (name.length === 0) {
+        window.alert('Ingresa tu nombre')
+      } else {
+        createUser(user).then((response) => {
+          response.json().then((data) => {
+            const { message } = data
+            console.log({ message })
+          })
+        })
+        window.alert('Usuario registrado correctamente')
+      }
     } else {
       window.alert('Los campos no coinciden')
     }

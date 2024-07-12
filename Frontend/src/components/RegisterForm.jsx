@@ -2,7 +2,7 @@ import MyInput from './Form/MyInput'
 import './Form/MyForm.css'
 import { useRegisterUser } from '../hooks/useRegisterUser'
 export default function () {
-  const { username, password, validationUsername, validationPassword, confirmPassword, confirmUsername, handleChange } = useRegisterUser()
+  const { username, password, validationUsername, validationPassword, confirmPassword, confirmUsername, handleSubmit, handleChange } = useRegisterUser()
   return (
     <div className='container'>
 
@@ -19,7 +19,7 @@ export default function () {
             />
           </div>
           <div className='input-container'>
-            <p>Ingresa una dirección de correo válido / Username <span>(8-20 caracteres / sin espacios )</span> </p>
+            <p>Ingresa una dirección de correo válido / Username <span>(8-30 caracteres / sin espacios )</span> </p>
             <MyInput id='username' onChange={handleChange} placeholder='Example123' type='text' name='username' validation={validationUsername} />
             <MyInput id='confirmUsername' onChange={handleChange} placeholder='Confirmar Username o correo' type='text' name='confirmUsername' />
           </div>
@@ -30,7 +30,7 @@ export default function () {
             <MyInput id='confirmPassword' onChange={handleChange} placeholder='Confirmar contraseña' type='password' name='confirmPassword' />
           </div>
 
-          <button type='submit' className='btn btn-primary'>Registrar</button>
+          <button type='submit' className='btn btn-primary' onClick={handleSubmit}>Registrar</button>
         </form>
         <div className='form-footer'>
           <p>¿Ya tienes una cuenta? </p>
