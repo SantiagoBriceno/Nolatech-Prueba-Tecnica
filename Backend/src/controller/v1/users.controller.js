@@ -21,7 +21,10 @@ export const getUserById = async (req, res) => {
 export const createUser = async (req, res) => {
   try {
     const user = await service.postUser(req.body.user)
-    res.status(201).json(user)
+    res.status(201).json({
+      message: 'Usuario creado correctamente',
+      user
+    })
   } catch (error) {
     res.status(500).json({ message: error.message })
   }
