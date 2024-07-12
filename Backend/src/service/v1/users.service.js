@@ -1,4 +1,4 @@
-import { getAllUsers, getOneUser, createNewUser, updateOneUser, deleteOneUser } from '../../database/user.js'
+import { getAllUsers, getOneUser, getOneUserByUsername, createNewUser, updateOneUser, deleteOneUser } from '../../database/user.js'
 import { v4 as uuidv4 } from 'uuid'
 
 const allUsersService = () => {
@@ -38,4 +38,15 @@ const deleteUser = (userId) => {
   return deleteUser
 }
 
-export default { allUsersService, getUserById, postUser, updateUser, deleteUser }
+const findUser = (username) => {
+  console.log(username)
+  try {
+    const findUser = getOneUserByUsername(username)
+    return findUser
+  } catch (error) {
+    console.log(error)
+    throw error
+  }
+}
+
+export default { allUsersService, getUserById, postUser, updateUser, deleteUser, findUser }
