@@ -31,3 +31,24 @@ export const validatePassword = (password) => {
 
   return { isValid: true, errorMessage: '' }
 }
+
+export const validateName = (name) => {
+  if (name.length < 3) {
+    return { isValid: false, errorMessage: 'El nombre debe tener al menos 3 caracteres' }
+  }
+
+  if (name.length > 20) {
+    return { isValid: false, errorMessage: 'El nombre no puede tener más de 30 caracteres' }
+  }
+
+  if (name[0] === ' ') {
+    return { isValid: false, errorMessage: 'El nombre no puede comenzar con un espacio en blanco' }
+  }
+
+  // Que sean puras letras
+  if (!name.match(/^[a-zA-Z]+$/)) {
+    return { isValid: false, errorMessage: 'El nombre solo puede contener letras' }
+  }
+
+  return { isValid: true, errorMessage: '' }
+}
