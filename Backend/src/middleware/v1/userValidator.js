@@ -13,7 +13,6 @@
 import bcrypt from 'bcrypt'
 
 export const userValidator = (req, res, next) => {
-  console.log(req.body)
   const { username, name, password } = req.body
   if (!username || !name || !password) {
     return res.status(400).json({ message: 'Faltan campos por llenar' })
@@ -58,8 +57,8 @@ export const loginValidator = (req, res, next) => {
   if (typeof username !== 'string' || typeof password !== 'string') {
     return res.status(400).json({ message: 'Los campos deben ser de tipo string' })
   }
-  if (username.length < 8 || username.length > 20) {
-    return res.status(400).json({ message: 'El username debe tener entre 8 y 20 caracteres' })
+  if (username.length < 8 || username.length > 30) {
+    return res.status(400).json({ message: 'El username debe tener entre 8 y 30 caracteres' })
   }
   if (password.length < 8) {
     return res.status(400).json({ message: 'La contraseña debe tener al menos 8 caracteres' })
