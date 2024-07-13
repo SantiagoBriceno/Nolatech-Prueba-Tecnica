@@ -45,12 +45,12 @@ export const useLoginUser = () => {
     } else {
       loginUser(username, password).then((response) => {
         console.log(response)
-        const { token, error } = response
+        const { token, error, message } = response
         if (token) {
           login(token)
           window.alert('Usuario logueado correctamente')
         } else {
-          window.alert(error)
+          window.alert(error || message)
         }
       })
     }
