@@ -29,9 +29,10 @@
 .fiveCard img {
   position: absolute;
   width: 100%;
-  object-fit: fill;
+  object-fit: scale-down;
   z-index: -1;
   max-height: 800px;
+  transform: scale(1.5);
 }
 
 .fiveCard .join-us {
@@ -83,15 +84,16 @@
 .sixCard img {
   position: absolute;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
   z-index: -1;
-  max-height: 600px;
+  height: fit-content;
+  background-color: #F5F6FA;
 }
 
 .sixCard div {
   width: 40%;
   margin-left: 5%;
-  margin-top: 10%
+  margin-top: 10%;
 }
 
 .sixCard h1 {
