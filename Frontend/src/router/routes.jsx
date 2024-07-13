@@ -20,12 +20,8 @@ export const router = createBrowserRouter(
         {
           path: '/login',
 
-          element:
-          (
-            <SesionContextProvider>
-              <LoginView />
-            </SesionContextProvider>
-          )
+          element: <LoginView />
+
         },
         {
           path: '/register',

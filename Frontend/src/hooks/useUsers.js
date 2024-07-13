@@ -4,22 +4,36 @@ import { useState, useEffect } from 'react'
 export const useUsers = () => {
   const [users, setUsers] = useState([])
   const [user, setUser] = useState()
+  const [userView, setUserView] = useState()
   const [onOpenView, setOnOpenView] = useState(false)
   const [onOpenEdit, setOnOpenEdit] = useState(false)
 
   const handleDelete = (e) => {
-    const id = e.target.id.split(' ')[1]
-    console.log(id)
+    console.log(e.target.id)
+    const index = e.target.id.split('-')[1]
+    const id = users[index].id
     deleteUser(id).then((data) => {
       console.log(data)
     })
   }
 
   const handleEdit = (e) => {
-    const id = e.target.id.split(' ')[1]
+    console.log(e.target.id)
+    const index = e.target.id.split('-')[1]
+    const id = users[index].id
     getUser(id).then((data) => {
       console.log(data)
       setUser(data)
+    })
+  }
+
+  const handleView = (e) => {
+    // Abrimos la modal
+    console.log(e.target.id)
+    const index = e.target.id.split('-')[1]
+    const id = users[index].id
+    getUser(id).then((data) => {
+      setUserView(data)
     })
   }
 
@@ -29,24 +43,20 @@ export const useUsers = () => {
     }
   }, [user])
 
-  const handleView = (e) => {
-    // Abrimos la modal
-
-    const id = e.target.id.split(' ')[1]
-    console.log(id)
-    getUser(id).then((data) => {
-      console.log(data)
-      setUser(data)
-    })
-    setOnOpenView(true)
-  }
+  useEffect(() => {
+    if (userView) {
+      setOnOpenView(true)
+    }
+  }, [userView])
 
   const handleCloseView = () => {
     setOnOpenView(false)
+    setUserView(null)
   }
 
   const handleCloseEdit = () => {
     setOnOpenEdit(false)
+    setUser(null)
   }
 
   useEffect(() => {
@@ -54,5 +64,5 @@ export const useUsers = () => {
       .then((data) => setUsers(data))
   }, [])
 
-  return { users, handleDelete, handleEdit, handleView, onOpenEdit, onOpenView, handleCloseEdit, handleCloseView, user }
+  return { users, handleDelete, handleEdit, handleView, onOpenEdit, onOpenView, handleCloseEdit, handleCloseView, user, userView }
 }

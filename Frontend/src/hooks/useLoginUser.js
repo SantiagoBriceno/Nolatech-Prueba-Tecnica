@@ -5,6 +5,7 @@ import { validateUsername, validatePassword } from './inputConditions'
 import { loginUser } from '../service/authentication'
 
 import { useSesionContext } from '../context/SesionContext'
+import { redirect } from 'react-router-dom'
 
 export const useLoginUser = () => {
   const { login } = useSesionContext()
@@ -49,6 +50,7 @@ export const useLoginUser = () => {
         if (token) {
           login(token)
           window.alert('Usuario logueado correctamente')
+          window.location.href = '/users'
         } else {
           window.alert(error || message)
         }
