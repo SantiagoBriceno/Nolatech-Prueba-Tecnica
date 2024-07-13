@@ -1,4 +1,5 @@
 import service from '../../service/v1/users.service.js'
+import bcrypt from 'bcrypt'
 
 export const getAllUsers = async (req, res) => {
   try {
@@ -32,6 +33,11 @@ export const createUser = async (req, res) => {
 
 export const updateUser = async (req, res) => {
   const { body, params } = req
+  const { password } = body
+
+  if (password) {
+    body.password = await bcrypt.hash(password, 10)
+  }
 
   if (!params.id) {
     res.status(400).json({ message: 'Falta el id del usuario a modificar' })
@@ -51,9 +57,24 @@ export const updateUser = async (req, res) => {
 export const deleteUser = async (req, res) => {
   try {
     await service.deleteUser(req.params.id)
-    res.status(204).json()
+    res.status(204).json({
+      message: 'Usuario eliminado correctamente'
+    })
   } catch (error) {
     res.status(500).json({ message: error.message })
+  }
+}
+
+export const verifyPassword = async (req, res) => {
+  const { oldPassword, password } = req.body
+  try {
+    const isCorrect = await bcrypt.compare(oldPassword, password)
+    if (!isCorrect) {
+      res.status(401).json({ isCorrect: false, message: 'Contraseña incorrecta' })
+    }
+    res.status(200).json({ isCorrect, message: 'Contraseña verificada correctamente' })
+  } catch {
+    res.status(500).json({ isCorrect: false, message: 'Error al verificar la contraseña' })
   }
 }
 
