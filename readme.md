@@ -1,83 +1,88 @@
-<h1 align="center">Awesome README Templates</h1>
-<p align="center"><i>A collection of awesome readme templates to display on your github profile.</i></p>
-<div align="center">
-  <a href="https://github.com/elangosundar/awesome-README-templates/stargazers"><img src="https://img.shields.io/github/stars/elangosundar/awesome-README-templates" alt="Stars Badge"/></a>
-<a href="https://github.com/elangosundar/awesome-README-templates/network/members"><img src="https://img.shields.io/github/forks/elangosundar/awesome-README-templates" alt="Forks Badge"/></a>
-<a href="https://github.com/elangosundar/awesome-README-templates/pulls"><img src="https://img.shields.io/github/issues-pr/elangosundar/awesome-README-templates" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/elangosundar/awesome-README-templates/issues"><img src="https://img.shields.io/github/issues/elangosundar/awesome-README-templates" alt="Issues Badge"/></a>
-<a href="https://github.com/elangosundar/awesome-README-templates/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/elangosundar/awesome-README-templates?color=2b9348"></a>
-<a href="https://github.com/elangosundar/awesome-README-templates/blob/master/LICENSE"><img src="https://img.shields.io/github/license/elangosundar/awesome-README-templates?color=2b9348" alt="License Badge"/></a>
-</div>
+<h1 align="center">Prueba técnica - Nolatech</h1>
+<p align="center"><i>Prueba técnica de Nolatech - realizada por Ing. Santiago Briceño</i></p>
+
 <br>
-<p align="center"><i>Loved the project? Please visit our <a href="https://awesome-github-readme-profile.netlify.app">Website</a></i></p>
-<br>
-This repo aims to collect the all `awesome beautiful READMEs profile` and make your Profile look good & Inspire other's.
 
-If you are intersted, will create a PR for to add your `README` profile here.
+Este repositorio está destinado para la realización de la prueba tecnica de Nolatech, la cual consiste en la componetización práctica de una pagina web con ReactJS, además de realizar los formulario de registro y login del usuario, en conjunto de una serie de validaciones de campos y la capacidad de poder realizar las acciones básicas de CRUD en una tabla de usuarios.
 
-If you like this Repo, Please click the :star:
-
-List of `awesome README Profile` categories mentioned below
-
-## Contents
-  - [Github README PROFILE CATEGORY](#github-readme-profile-category)
-  - [List out `Awesome README Profile` Tools](#list-out-awesome-readme-profile-tools)
-  - [List out `Awesome README Profile` Articles](#list-out-awesome-readme-profile-articles)
-  - [Contribute](#contribute)
-
-## Website
-
-Link : https://awesome-github-readme-profile.netlify.app
-
-<a href="https://awesome-github-readme-profile.netlify.app"><img src="https://raw.githubusercontent.com/elangosundar/awesome-README-templates/master/awesome-github-profile.png" alt="Awesome README Templates" /></a>
+## Contenido
+  - [Monorepositorio multipaquete](#github-readme-profile-category)
+  - [Front-End de proyecto](#list-out-awesome-readme-profile-tools)
+  - [Back-End del proyecto](#list-out-awesome-readme-profile-articles)
+  - [Archivo simulador de base de datos](#contribute)
 
 
-## Github README PROFILE CATEGORY
+## Descripción
 
-- [ ] [Art](art)
-- [ ] [Code Styled](code-styled)
-- [ ] [Creativity](creativity)
-- [ ] [Flowcharts](flowcharts)
-- [ ] [Default](default)
-- [ ] [Dynamic Realtime](dynamic-realtime)
-- [ ] [Elaborate](elaborate)
-- [ ] [Multimedia](multimedia)
-- [ ] [Short-and-sweet](short-and-sweet)
-- [ ] [Tabular](tabular)
-- [ ] [Pie Charts](pie-charts)
+El proyecto se encuentra dividido en dos partes, el front-end y el back-end, los cuales se encuentran en carpetas separadas dentro del repositorio. Ambas con sus respectivas herramientas de desarrollo. 
 
-# List out `Awesome README Profile` Tools
+El frontend se encuentra desarrollado en ReactJS, utilizando CSS puro para dar estilos básicos a la aplicación. Debemos hacer alusión que se buscó la implementación de componentes reutilizables, los cuales se encuentra en la carpeta `src/components`, junto a ellos, encontraremos el desarrollo de un conjunto de Custom Hooks empleados por los mismos, es ahí donde encontraremos también la validación del FRONT-END; además de la implementación de un archivo de configuración de rutas con ayuda del enrutador React-Router, el cual se encuentra en `src/router/routes.js`. El Fetching de los datos se realizaron sin ayuda de librerias externas, utilizando el método `fetch` nativo de JavaScript y la implementación de `async/await` (Promises) para la obtención de los datos y manipulación de los mismos, los métodos podremos encontrarlos en `src/service/`.
 
-- [Profile Summary For Github](https://profile-summary-for-github.com/search)
-- [Github Readme Stats](https://github.com/anuraghazra/github-readme-stats) - Dynamically generated stats for your github readmes
-- [Profile Activity Generator](https://github.com/omidnikrah/profile-activity-generator) - Generate custom profile activity for your profile README
-- [All Dev Stats in Readme](https://github.com/anmol098/waka-readme-stats) - Are you an early 🐤 or a night 🦉? When are you most productive during the day? What languages you code in? And other stuff... Let's check out in your readme!
-- [Visitor Badge](https://visitor-badge.glitch.me/#docs) - Count visitors for your README.md, Issues, PRs in GitHub
-- [1990s style Visitor Counter](https://twitter.com/ryanlanciaux/status/1283755637126705152) - Add a 1990s style visitor counter with one line of markdown.
-- [Vists Count](https://pufler.dev/git-badges/) - Count visitors for README.md that can be used with shields.io
-- [Shields Project](https://shields.io/) - Use Shields to create profile badges, compatible with Simple Icons
-- [Simple Icons](https://github.com/simple-icons/simple-icons#cdn-usage) - SVG icons for popular brands for your README.md files
-- [Laravel GitHub Profile Visit Counter](https://github.com/caneco/laravel-github-profile-view-counter) - Add on your Laravel project a quick-badge to count your profile visits.
-- [Dev Metrics in Readme](https://github.com/athul/waka-readme) - [WakaTime](https://wakatime.com/) Weekly Metrics on your Profile Readme
-- [Current UTC time](https://github.com/jojoee/jojoee) - Example code of server that can serve dynamic content on GitHub profile
-- [Github Activity in README](https://github.com/jamesgeorge007/github-activity-readme) - Updates `README.md` with the recent GitHub activity of a user
-- [Github Profile README Generator](https://github.com/rahuldkjain/github-profile-readme-generator) - This tool provides an easy way to create github profile readme with latest addons like `visitors count`, `github stats` etc.
-- [Dynamic Profile Page On Github](https://github.com/umutphp/github-action-dynamic-profile-page) - Get dynamically generated list of your commits (of the repositories that the action is configured) on GitHub profile readme.
-- [npm package downloads](https://github.com/maddhruv/github-readme-npm-downloads) - Show all of your npm packages and their total downloads
-- [Feedparser](https://pythonhosted.org/feedparser/) - Convenient processing of RSS files
-- [Github Profile README Generator](https://github.com/arturssmirnovs/github-profile-readme-generator) - This project allows you to create nice and simple github profile readme files.
-- [Github Gist Count Generator](https://github.com/lifeparticle/Gist-Count) - Get gist count for your github readmes.
+El backend se encuentra desarrollado en NodeJS, utilizando ExpressJS como framework para el desarrollo de la API REST, la cual se encarga de la manipulación de los datos de los usuarios, los cuales se encuentran almacenados en un archivo JSON simulando una base de datos (Para evitar problemáticas relacionados al momento de ejecutar el proyecto en otros dispositivos) y siendo manipulada con ayuda de la libreria FileSystem y la creación de un Modelo para la entidad User, todos estos archivos podremos encontrarlos en la carpeta `src/database`. La API cuenta con un conjunto de rutas que permiten la manipulación de los datos de los usuarios, las cuales se encuentran en `src/routes/v1`. Los métodos de la API se encuentran distribuidos en la carpeta `src/controllers/v1`, los cuales se encargan de la manipulación de los datos y la respuesta de los mismos empleando el estandar de respuesta de la API. Las validaciones de los campos de los formularios fueron desarrollados sin ayuda de librerias externas, empleando lógica de programación en conjunto de la posibilidad que nos brinda NodeJS de manipular nuestro objeto Request, los métodos de validación se encuentran en `src/middlewares/v1`. Por ultimo, los servicios de comunicación con nuestra "Base de datos JSON" se encuentran en `src/services/v1`.
 
-# List out `Awesome README Profile` Articles
+Es de resaltar que las validaciones de los campos (Requisito de la prueba técnica) se encuentran en ambos lados, tanto en el FRONT-END como en el BACK-END, esto con el fin de garantizar la integridad de los datos y evitar problemas de seguridad en la aplicación.
 
-# Contribute
+### Instalación 🔧
 
-Contributions are always welcome! Please create a PR to add Github Profile.
+Una guía paso a paso sobre cómo configurar el entorno de desarrollo e instalar todas las dependencias.
 
-## :pencil: License
+```bash
+# paso 1
+# Clonar el repositorio en tu maquina local
+# git clone https://github.com/SantiagoBriceno/Nolatech-Prueba-Tecnica.git
+```
 
-This project is licensed under [MIT](https://opensource.org/licenses/MIT) license.
+```bash
+# paso 2
+# Instalar las dependencias en la raiz del proyecto
+# npm install
+```
 
-## :man_astronaut: Show your support
+```bash
+# paso 3
+# Instalar las dependencias en la carpeta del backend
+# cd backend
+# npm install
+```
 
-Give a ⭐️ if this project helped you!
+```bash
+# paso 4
+# Instalar las dependencias en la carpeta del frontend
+# cd frontend
+# npm install
+```
+
+```bash
+# paso 5
+# Ejecutar el proyecto
+# npm run dev en la raiz del proyecto
+```
+
+## Construido Con 🛠️
+
+- [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) - Lenguaje de programación
+- [NodeJS](https://nodejs.org/es/) - Entorno de ejecución
+- [ExpressJS](https://expressjs.com/es/) - Framework de NodeJS
+- [React](https://es.react.dev/) - Biblioteca de JavaScript
+- [Vite](https://vitejs.dev/) - Herramienta de desarrollo de frontend
+- [CSS](https://developer.mozilla.org/es/docs/Web/CSS) - Lenguaje de estilos
+- [JSON](https://www.json.org/json-es.html) - Formato de intercambio de datos
+- [FileSystem](https://nodejs.org/api/fs.html) - Módulo de NodeJS
+- [React-Router](https://reactrouter.com/web/guides/quick-start) - Enrutador de React
+
+
+## Autor ✒️
+
+- **Santiago G. Briceño F.** - _Ing. de Sistemas_ - [Santiago G. Briceño F.](https://github.com/SantiagoBriceno)
+
+## Expresiones de Gratitud 🎁
+
+Muy a gusto con la oportunidad brindad, no solo por la posibilidad de demostrar mis habilidades, sino por la posibilidad de aprender y mejorar en el proceso. Me gustaria recibir un feedback de la prueba realizada, con el fin de mejorar y corregir los errores que se hayan podido cometer.
+
+## Observaciones y curiosidades del proyecto
+
+- Los estilos de la aplicación en el FRONT-END fueron realizados sin ayuda de librerias externas, empleando CSS puro, por lo cual tiene un aspecto básico y sencillo que puede ser mejorado utilizando librerias de estilos como Bootstrap, Material-UI, TailwindCSS, entre otros.
+
+- La validación de los campos en el BACK-END se realizó sin ayuda de librerias externas, empleando lógica de programación por lo cual tiene un desarrollo básico y fácil de ser vulnerado, sin embargo se puede mejorar utilizando librerias de validación como Joi, Yup, entre otros, que potenciarian la seguridad de la aplicación.
+
+- La base de datos fue SIMULADA con un archivo JSON, y sin ayuda de gestores de base de datos, por lo cual, no se garantiza la integridad y seguridad de los datos, sin embargo, se puede mejorar utilizando gestores de base de datos como MongoDB, MySQL, PostgreSQL, entre otros.
