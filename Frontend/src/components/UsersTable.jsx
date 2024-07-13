@@ -59,7 +59,7 @@ export default function () {
           </ModalView>
         }
         {
-        onOpenEdit &&
+        onOpenEdit && user &&
           <ModalView title='Editar usuario' onClose={handleCloseEdit}>
             <EditForm user={user} />
           </ModalView>
