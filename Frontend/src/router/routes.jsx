@@ -2,7 +2,8 @@ import { createBrowserRouter } from 'react-router-dom'
 import HomeView from '../views/Home.view'
 import LoginView from '../views/Login.view'
 import Header from '../components/partials/Header'
-import RegisterForm from '../components/RegisterForm'
+import RegisterView from '../views/Register.view'
+import UsersView from '../views/Users.view'
 
 import { SesionContextProvider } from '../context/SesionContext'
 
@@ -28,11 +29,12 @@ export const router = createBrowserRouter(
         },
         {
           path: '/register',
-          element: <RegisterForm />
+          element: <RegisterView />
 
         },
         {
-          path: '/public'
+          path: '/users',
+          element: <UsersView />
         }
       ]
     }

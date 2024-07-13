@@ -11,3 +11,8 @@ export const createUser = async (newUser) => {
   })
   return response
 }
+
+export const getUsers = async () => {
+  const response = await fetch(RUTA_USERS)
+  return response.json()
+}

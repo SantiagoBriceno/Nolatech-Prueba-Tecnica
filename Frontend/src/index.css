@@ -184,6 +184,10 @@ nav {
   border-top: 3px solid #028433;
 }
 
+hr{
+  width: 0;
+}
+
 .blockSpan {
   font-size: 26px !important;
   color: #03B044 !important;
