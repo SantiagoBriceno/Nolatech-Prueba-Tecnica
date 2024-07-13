@@ -1,4 +1,4 @@
-import './table/table.css'
+import '../styles/table.css'
 import { useUsers } from '../hooks/useUsers'
 import { FiXCircle, FiEdit } from 'react-icons/fi'
 import { LuEye } from 'react-icons/lu'
