@@ -5,7 +5,6 @@ import { SECRET } from '../../config.js'
 
 export const loginUser = async (req, res) => {
   const { username, password } = req.body
-  console.log(username, password)
   try {
     const findUser = service.findUser(username)
     const passwordCorrect = findUser.length === 0
