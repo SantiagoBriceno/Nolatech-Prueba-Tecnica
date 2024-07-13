@@ -21,7 +21,7 @@ export const userValidator = (req, res, next) => {
   if (typeof username !== 'string' || typeof name !== 'string' || typeof password !== 'string') {
     return res.status(400).json({ message: 'Los campos deben ser de tipo string' })
   }
-  if (username.length < 8 || username.length > 20) {
+  if (username.length < 8 || username.length > 30) {
     return res.status(400).json({ message: 'El username debe tener entre 8 y 20 caracteres' })
   }
   if (password.length < 8) {

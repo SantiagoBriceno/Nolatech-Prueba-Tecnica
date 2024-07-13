@@ -5,7 +5,8 @@ import {
   getUserById,
   createUser,
   updateUser,
-  deleteUser
+  deleteUser,
+  verifyPassword
 } from '../../controller/v1/users.controller.js'
 
 const router = Router()
@@ -13,6 +14,7 @@ const router = Router()
 router.get('/', getAllUsers)
 router.get('/:id', getUserById)
 router.post('/', userValidator, createUser)
+router.post('/verify-password', verifyPassword)
 router.patch('/:id', updateUser)
 router.delete('/:id', deleteUser)
 
