@@ -10,7 +10,6 @@ export const useEditUser = ({ user }) => {
   const [confirmPassword, setConfirmPassword] = useState()
   const [validationName, setValidationName] = useState({ isValid: true, errorMessage: '' })
   const [validationUsername, setValidationUsername] = useState({ isValid: true, errorMessage: '' })
-  const [validationPassword, setValidationPassword] = useState({ isValid: true, errorMessage: '' })
   const [validationNewPassword, setValidationNewPassword] = useState({ isValid: true, errorMessage: '' })
   const [validationConfirmPassword, setValidationConfirmPassword] = useState({ isValid: true, errorMessage: '' })
 
