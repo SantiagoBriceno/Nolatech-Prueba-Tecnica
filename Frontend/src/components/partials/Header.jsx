@@ -11,7 +11,7 @@ export default function () {
           </span>
           <span> Lorem ipsu dolor sit amet </span>
           <NavLink to='/login' className='to-login'>
-            <span className='isJoin'> Join Now &nbsp;&nbsp;<i class='fa-solid fa-circle-play' /></span>
+            <span className='isJoin'> Join Now &nbsp;&nbsp;<i className='fa-solid fa-circle-play' /></span>
           </NavLink>
         </div>
 
