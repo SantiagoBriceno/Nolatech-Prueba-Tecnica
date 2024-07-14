@@ -3,7 +3,7 @@ import { createContext, useContext, useCallback, useMemo, useState } from 'react
 export const SesionContext = createContext()
 
 export const SesionContextProvider = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(window.localStorage.getItem('token') ?? false)
+  const [isAuthenticated, setIsAuthenticated] = useState(window.localStorage.getItem('auth') ?? false)
 
   const login = useCallback((auth) => {
     window.localStorage.setItem('auth', JSON.stringify(auth))
