@@ -1,0 +1,20 @@
+Usuario para probar el login 
+
+Username: Administrador
+Password: 12345678
+
+La base de datos se encuentra en la carpeta BackEnd/src/database/db.sql
+Esta completamente rellenada con datos de prueba para poder probar la aplicación (Mayormente la tabla de usuarios y comprobar la paginación)
+
+RUTAS DE LA APIREST DE MANERA LOCAL PARA PROBAR LA FUNCIONALIDAD DE LA API en los metodos get:
+
+---- ENTIDAD USUARIO ----
+http://localhost:3000/api/v1/users - GET (Listado de usuarios)
+http://localhost:3000/api/v1/users/paginated?page=1&limit=5 - GET (Paginación de usuarios)
+http://localhost:3000/api/v1/users/e237a94c-6423-4b7a-8a46-c74331a2b050 - GET (Visualizar un usuario en especifico)
+
+---- PUNTO DE ENTRADA PARA CADA VISTA DEL FRONTEND ----
+http://localhost:5173/
+http://localhost:5173/login
+http://localhost:5173/register
+http://localhost:5173/users
