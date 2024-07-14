@@ -2,8 +2,7 @@ import { HiMiniSignal } from 'react-icons/hi2'
 import { NavLink, Outlet } from 'react-router-dom'
 import { useSesionContext } from '../../context/SesionContext'
 export default function () {
-  const { logout } = useSesionContext()
-  const user = JSON.parse(window.localStorage.getItem('auth'))
+  const { logout, isAuthenticated } = useSesionContext()
 
   return (
     <>
@@ -21,7 +20,7 @@ export default function () {
           </NavLink>
 
           <span> Lorem ipsu dolor sit amet </span>
-          {user
+          {isAuthenticated
             ? (
               <NavLink
                 onClick={() => {
