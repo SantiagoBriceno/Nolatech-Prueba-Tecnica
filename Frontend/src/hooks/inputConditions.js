@@ -52,8 +52,7 @@ export const validateName = (name) => {
     return { isValid: false, errorMessage: 'El nombre no puede comenzar con un espacio en blanco' }
   }
 
-  // Que sean puras letras
-  if (!name.match(/^[a-zA-Z\s]+$/)) {
+  if (!name.match(/^[a-zA-Z\u00F1\u00D1\s]+$/)) {
     return { isValid: false, errorMessage: 'El nombre solo puede contener letras' }
   }
 
