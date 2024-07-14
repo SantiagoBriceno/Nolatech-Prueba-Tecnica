@@ -72,7 +72,7 @@ form {
   height:80px;
 }
 
-.input-container p {
+.input-container .form-label {
   font-size: 12px;
   color: #333;
   margin: 0;
