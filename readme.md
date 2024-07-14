@@ -20,7 +20,19 @@ El frontend se encuentra desarrollado en ReactJS, utilizando CSS puro para dar e
 
 El backend se encuentra desarrollado en NodeJS, utilizando ExpressJS como framework para el desarrollo de la API REST, la cual se encarga de la manipulación de los datos de los usuarios, los cuales se encuentran almacenados en un archivo JSON simulando una base de datos (Para evitar problemáticas relacionados al momento de ejecutar el proyecto en otros dispositivos) y siendo manipulada con ayuda de la libreria FileSystem y la creación de un Modelo para la entidad User, todos estos archivos podremos encontrarlos en la carpeta `src/database`. La API cuenta con un conjunto de rutas que permiten la manipulación de los datos de los usuarios, las cuales se encuentran en `src/routes/v1`. Los métodos de la API se encuentran distribuidos en la carpeta `src/controllers/v1`, los cuales se encargan de la manipulación de los datos y la respuesta de los mismos empleando el estandar de respuesta de la API. Las validaciones de los campos de los formularios fueron desarrollados sin ayuda de librerias externas, empleando lógica de programación en conjunto de la posibilidad que nos brinda NodeJS de manipular nuestro objeto Request, los métodos de validación se encuentran en `src/middlewares/v1`. Por ultimo, los servicios de comunicación con nuestra "Base de datos JSON" se encuentran en `src/services/v1`. Fue aquí en el backEnd que se simuló el uso de un token de autenticación, el cual se encuentra en la carpeta `src/controller/login` y se encarga de la validación del token en las rutas protegidas de la API apesar de no ser empleado en su totalidad en el FRONT-END.
 
+Se realizaron dos encriptaciones de datos, por un lado la contraseña de los usuarios, la cual se encripta con ayuda de la libreria `bcrypt` en donde utilizamos el método `hash` para encriptar la contraseña y el método `compare` para comparar la contraseña encriptada con la contraseña ingresada por el usuario. Por otro lado, se encripta el id del usuario con ayuda de la libreria uuid, la cual nos permite generar un id único para cada usuario, el cual se encripta con el método `v4` de la libreria y se guarda en la base de datos encriptado y no incurrir en problemas de seguridad al hacer el id un campo incremental y con ello facilmente predecible.
+
 Es de resaltar que las validaciones de los campos (Requisito de la prueba técnica) se encuentran en ambos lados, tanto en el FRONT-END como en el BACK-END, esto con el fin de garantizar la integridad de los datos y evitar problemas de seguridad en la aplicación.
+
+## RUTAS DE LA API
+
+- **GET** - /api/v1/users - Obtiene todos los usuarios
+-**GET** - /api/v1/users/paginated - Obtiene todos los usuarios de forma paginada Ingresando la pagina y la cantidad de usuarios por pagina deseados como queryparam (Ejemplo: /api/v1/users/paginated?page=1&limit=10)
+- **GET** - /api/v1/users/:id - Obtiene un usuario por su ID
+- **POST** - /api/v1/users - Crea un usuario
+- **PUT** - /api/v1/users/:id - Actualiza un usuario por su ID
+- **DELETE** - /api/v1/users/:id - Elimina un usuario por su ID
+- **POST** - /api/v1/login - Inicia sesión de un usuario
 
 ## Condiciones del proyecto
 
