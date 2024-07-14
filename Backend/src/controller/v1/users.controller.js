@@ -10,6 +10,16 @@ export const getAllUsers = async (req, res) => {
   }
 }
 
+export const getAllUsersPaginated = async (req, res) => {
+  const { page, limit } = req.query
+  try {
+    const users = await service.allUsersPaginatedService(page, limit)
+    res.status(200).json(users)
+  } catch (error) {
+    res.status(500).json({ message: error.message })
+  }
+}
+
 export const getUserById = async (req, res) => {
   try {
     const user = await service.getUserById(req.params.id)
@@ -56,8 +66,9 @@ export const updateUser = async (req, res) => {
 
 export const deleteUser = async (req, res) => {
   try {
-    await service.deleteUser(req.params.id)
+    const deleteUser = await service.deleteUser(req.params.id)
     res.status(204).json({
+      deleteUser,
       message: 'Usuario eliminado correctamente'
     })
   } catch (error) {
@@ -77,12 +88,3 @@ export const verifyPassword = async (req, res) => {
     res.status(500).json({ isCorrect: false, message: 'Error al verificar la contraseña' })
   }
 }
-
-// export const deleteUser = async (req, res) => {
-//   try {
-//     await service.deleteUser(req.params.id)
-//     res.status(204).json()
-//   } catch (error) {
-//     res.status(500).json({ message: error.message })
-//   }
-// }
