@@ -44,7 +44,7 @@ const getOneUserByUsername = (username) => {
 
 const createNewUser = (newUser) => {
    try{
-     const userExist = db.users.findIndex(user => user.username === newUser.username)
+     const userExist = db.users.findIndex(user => user.username.toLowerCase() === newUser.username.toLowerCase())
      if (userExist !== -1) {
        throw {
          status: 400,
