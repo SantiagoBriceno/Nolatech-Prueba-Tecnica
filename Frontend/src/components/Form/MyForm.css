@@ -68,6 +68,10 @@ form {
   gap: 5px;
 }
 
+.form-group{
+  height:80px;
+}
+
 .input-container p {
   font-size: 12px;
   color: #333;
