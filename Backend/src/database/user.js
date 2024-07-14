@@ -25,7 +25,7 @@ const getOneUser = (userId) => {
 const getOneUserByUsername = (username) => {
   console.log(username)
   try{
-    const userId = db.users.findIndex(user => user.username === username)
+    const userId = db.users.findIndex(user => user.username.toLowerCase() === username)
     if (userId === -1) {
       throw {
         status: 400,
