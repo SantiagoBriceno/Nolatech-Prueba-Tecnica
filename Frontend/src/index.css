@@ -34,7 +34,6 @@ header>div>span {
 
 .isLive {
   font-size: 20px;
-  text-decoration: none;
   height: 100%;
   display: flex;
   font-weight: bold;
@@ -45,10 +44,13 @@ header>div>span {
   background-color: red;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
 }
+
 
 .isLive:hover {
   background-color: #c02d2d;
+  text-decoration: none;
 }
 
 .to-login {
@@ -69,6 +71,7 @@ header>div>span {
   background-color: #07913B;
   box-shadow: 20px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 nav {
