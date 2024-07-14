@@ -31,9 +31,9 @@ export default function () {
                 <td>{user.created_at}</td>
                 <td>{user.updated_at}</td>
                 <td className='icon-container'>
-                  <LuEye id={`V-${index}`} onClick={handleView} className='icon view' />
-                  <FiEdit id={`E-${index}`} onClick={handleEdit} className='icon edit' />
-                  <FiXCircle id={`D-${index}`} onClick={handleDelete} className='icon delete' />
+                  <LuEye title='Visualizar datos' id={`V-${index}`} onClick={handleView} className='icon view' />
+                  <FiEdit title='Editar usuario' id={`E-${index}`} onClick={handleEdit} className='icon edit' />
+                  <FiXCircle title='Borrar Usuario' id={`D-${index}`} onClick={handleDelete} className='icon delete' />
                 </td>
               </tr>
             ))}
@@ -75,7 +75,7 @@ export default function () {
         {
         onOpenEdit && user &&
           <ModalView title='Editar usuario' onClose={handleCloseEdit}>
-            <EditForm user={user} />
+            <EditForm user={user} handleCancel={handleCloseEdit} />
           </ModalView>
         }
       </div>
