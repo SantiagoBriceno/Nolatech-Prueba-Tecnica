@@ -22,6 +22,27 @@ El backend se encuentra desarrollado en NodeJS, utilizando ExpressJS como framew
 
 Es de resaltar que las validaciones de los campos (Requisito de la prueba técnica) se encuentran en ambos lados, tanto en el FRONT-END como en el BACK-END, esto con el fin de garantizar la integridad de los datos y evitar problemas de seguridad en la aplicación.
 
+## Condiciones del proyecto
+
+- La aplicación cuenta con un formulario de registro, el cual solicita los siguientes campos:
+  - Nombre y apellido
+  - Nombre de usuario o correo electrónico
+  - Confirmación de nombre de usuario o correo electrónico
+  - Contraseña
+  - Confirmación de contraseña
+
+- La aplicación cuenta con un formulario de login, el cual solicita los siguientes campos:
+  - Nombre de usuario o correo electrónico
+  - Contraseña
+
+- Los campos de los formularios deben cumplir con las siguientes condiciones:
+  - Todos los campos son obligatorios
+  - El campo de nombre y apellido debe contener solo letras
+  - El campo de nombre de usuario o correo electrónico no debe contener espacios en blanco y en caso de ser un correo electrónico, debe tener el formato correcto
+  - El campo de confirmación de nombre de usuario o correo electrónico debe ser igual al campo de nombre de usuario o correo electrónico
+  - El campo de contraseña cuenta con validaciones básicas de seguridad (Mínimo 8 carácteres, máximo 20 carácteres y no debe contener espacios en blanco) Puede mejorarse incluyendo más validaciones de seguridad
+  - El campo de confirmación de contraseña debe ser igual al campo de contraseña
+
 ### Instalación 🔧
 
 Una guía paso a paso sobre cómo configurar el entorno de desarrollo e instalar todas las dependencias.
