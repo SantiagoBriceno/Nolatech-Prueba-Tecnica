@@ -48,9 +48,12 @@ export const useUsers = () => {
     console.log(e.target.id)
     const index = e.target.id.split('-')[1]
     const id = users[index].id
-    deleteUser(id).then((response) => {
-      console.log(response)
-    })
+    if (id) {
+      deleteUser(id).then((response) => {
+        console.log(response)
+      })
+      window.location.reload()
+    }
   }
 
   const handleEdit = (e) => {
