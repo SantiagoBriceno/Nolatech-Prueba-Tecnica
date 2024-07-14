@@ -1,6 +1,6 @@
 import MyInput from './Form/MyInput'
 import { useEditUser } from '../hooks/useEditUser'
-export default function ({ user }) {
+export default function ({ user, handleCancel }) {
   const { handleChange, validationConfirmPassword, validationName, validationNewPassword, validationUsername, handleSubmit } = useEditUser({ user })
   return (
     <div className='edit-form'>
@@ -22,9 +22,9 @@ export default function ({ user }) {
         </div>
         <hr />
 
-        <div className='btn-group' onClick={handleSubmit}>
-          <button type='submit'>Guardar</button>
-          <button type='button'>Cancelar</button>
+        <div className='btn-group'>
+          <button className='btn' onClick={handleSubmit} type='submit'>Guardar</button>
+          <button className='btn' onClick={handleCancel} type='button'>Cancelar</button>
         </div>
 
       </form>
