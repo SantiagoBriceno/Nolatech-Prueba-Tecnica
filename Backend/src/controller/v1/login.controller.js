@@ -11,7 +11,7 @@ export const loginUser = async (req, res) => {
       ? false
       : await bcrypt.compare(password, findUser.password)
     if (!(findUser && passwordCorrect)) {
-      return res.status(401).json({ error: 'Invalid username or password' })
+      return res.status(401).json({ error: 'Usuario o contraseña invalida, por favor, intente nuevamente' })
     } else {
       const userForToken = {
         name: findUser.name,
