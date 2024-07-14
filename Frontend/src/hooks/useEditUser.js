@@ -70,6 +70,7 @@ export const useEditUser = ({ user }) => {
       if (!oldPassword) {
         console.log(changes)
         updateUser(user.id, changes)
+        window.location.reload()
       } else {
         const { password } = user
         console.log(password)
@@ -81,6 +82,7 @@ export const useEditUser = ({ user }) => {
             console.log(changes)
             window.alert('Contraseña correcta')
             updateUser(user.id, changes)
+            window.location.reload()
           } else {
             window.alert('Contraseña incorrecta')
           }
