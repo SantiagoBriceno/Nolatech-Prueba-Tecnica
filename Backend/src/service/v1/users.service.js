@@ -6,6 +6,28 @@ const allUsersService = () => {
   return allUsers
 }
 
+const allUsersPaginatedService = (page, limit) => {
+  // Recibo la pagina que quiero y el limite de saltos por pagina que debe hacer
+
+  // Paso 1: Obtener todos los usuarios
+  const allUsers = getAllUsers()
+
+  // Paso 2: Calcular el numero de paginas
+  const totalPages = Math.ceil(allUsers.length / limit)
+
+  // Paso 3: Calcular el indice de inicio de la paginación segun la pagina que se quiere
+  const startIndex = (page - 1) * limit
+
+  // Paso 4: Calcular el indice final de la paginación segun el limite de saltos
+  const endIndex = page * limit
+
+  // Paso 5: Obtener los usuarios de la pagina que se quiere
+  const users = allUsers.slice(startIndex, endIndex)
+
+  // Paso 6: Retornar los usuarios de la pagina, el total de paginas y el total de usuarios
+  return { users, totalPages, totalUsers: allUsers.length }
+}
+
 const getUserById = (userId) => {
   const user = getOneUser(userId)
   return user
@@ -49,4 +71,4 @@ const findUser = (username) => {
   }
 }
 
-export default { allUsersService, getUserById, postUser, updateUser, deleteUser, findUser }
+export default { allUsersService, allUsersPaginatedService, getUserById, postUser, updateUser, deleteUser, findUser }

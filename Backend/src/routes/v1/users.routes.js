@@ -6,12 +6,14 @@ import {
   createUser,
   updateUser,
   deleteUser,
-  verifyPassword
+  verifyPassword,
+  getAllUsersPaginated
 } from '../../controller/v1/users.controller.js'
 
 const router = Router()
 
 router.get('/', getAllUsers)
+router.get('/paginated', getAllUsersPaginated)
 router.get('/:id', getUserById)
 router.post('/', userValidator, createUser)
 router.post('/verify-password', verifyPassword)
