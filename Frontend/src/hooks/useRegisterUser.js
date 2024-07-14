@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { validateUsername, validatePassword } from './inputConditions'
+import { validateUsername, validatePassword, validateName } from './inputConditions'
 import { createUser } from '../service/user'
 
 export const useRegisterUser = () => {
@@ -11,6 +11,7 @@ export const useRegisterUser = () => {
 
   const [validationUsername, setValidationUsername] = useState({ isValid: true, errorMessage: '' })
   const [validationPassword, setValidationPassword] = useState({ isValid: true, errorMessage: '' })
+  const [validationName, setValidationName] = useState({ isValid: true, errorMessage: '' })
 
   const handleChange = (e) => {
     const { id, value } = e.target
@@ -40,7 +41,6 @@ export const useRegisterUser = () => {
   // Y caso password debe tener al menos 8 caracteres y no tener espacios en blanco
 
   useEffect(() => {
-    console.log(username)
     if (username.length > 0) {
       setValidationUsername(validateUsername(username))
     }
@@ -51,6 +51,12 @@ export const useRegisterUser = () => {
       setValidationPassword(validatePassword(password))
     }
   }, [password])
+
+  useEffect(() => {
+    if (name.length > 0) {
+      setValidationName(validateName(name))
+    }
+  }, [name])
 
   // Aqui validaremos que los campos sean iguales en confirmUsername y confirmPassword a username y password respectivamente
   const handleSubmit = (e) => {
@@ -73,10 +79,10 @@ export const useRegisterUser = () => {
         createUser(user).then((response) => {
           response.json().then((data) => {
             const { message } = data
-            console.log({ message })
+            window.alert(message)
+            window.location.href = '/login'
           })
         })
-        window.alert('Usuario registrado correctamente')
       }
     } else {
       window.alert('Los campos no coinciden')
@@ -90,6 +96,7 @@ export const useRegisterUser = () => {
     confirmPassword,
     validationUsername,
     validationPassword,
+    validationName,
     handleChange,
     handleSubmit
   }
