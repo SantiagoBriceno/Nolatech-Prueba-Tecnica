@@ -13,6 +13,13 @@ export const validateUsername = (username) => {
     return { isValid: false, errorMessage: 'El username debe comenzar con una letra' }
   }
 
+  // Verificamos que si usurname tiene un @, este cumpla con el formato de un correo electrónico válido
+  if (username.includes('@')) {
+    if (!username.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i)) {
+      return { isValid: false, errorMessage: 'El username debe ser un correo electrónico válido' }
+    }
+  }
+
   return { isValid: true, errorMessage: '' }
 }
 
@@ -46,7 +53,7 @@ export const validateName = (name) => {
   }
 
   // Que sean puras letras
-  if (!name.match(/^[a-zA-Z]+$/)) {
+  if (!name.match(/^[a-zA-Z\s]+$/)) {
     return { isValid: false, errorMessage: 'El nombre solo puede contener letras' }
   }
 
