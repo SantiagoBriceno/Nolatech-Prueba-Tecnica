@@ -5,14 +5,16 @@ import { LuEye } from 'react-icons/lu'
 import EditForm from './EditForm'
 
 export default function () {
-  const { users, handleDelete, handleEdit, handleView, user, userView, onOpenView, onOpenEdit, handleCloseView, handleCloseEdit } = useUsers()
+  const { users, handleDelete, handleEdit, handleView, user, userView, onOpenView, onOpenEdit, handleCloseView, handleCloseEdit, currentPage, handlePage, totalPages } = useUsers()
   return (
     <div className='container'>
       <div className='card'>
         <h1>Lista de Usuarios</h1>
         <table className='table'>
+
           <thead>
             <tr>
+              <th>N°</th>
               <th>Nombre</th>
               <th>Username</th>
               <th>Fecha de creación</th>
@@ -23,6 +25,7 @@ export default function () {
           <tbody>
             {users.map((user, index) => (
               <tr key={user.id}>
+                <td>{index + 1}</td>
                 <td>{user.name}</td>
                 <td>{user.username}</td>
                 <td>{user.created_at}</td>
@@ -35,6 +38,18 @@ export default function () {
               </tr>
             ))}
           </tbody>
+          {/* Bottones de paginación */}
+          <tfoot>
+            <tr>
+              <td colSpan='6'>
+                <div className='pagination-btn'>
+                  <button id='previous' onClick={handlePage}>Anterior</button>
+                  <span>{currentPage} /{totalPages}</span>
+                  <button id='next' onClick={handlePage}>Siguiente</button>
+                </div>
+              </td>
+            </tr>
+          </tfoot>
         </table>
         {
         onOpenView &&
