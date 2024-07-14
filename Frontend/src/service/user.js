@@ -17,6 +17,11 @@ export const getUsers = async () => {
   return response.json()
 }
 
+export const getPaginatedUsers = async (page, limit) => {
+  const response = await fetch(`${RUTA_USERS}/paginated?page=${page}&limit=${limit}`)
+  return response.json()
+}
+
 export const getUser = async (id) => {
   const response = await fetch(`${RUTA_USERS}/${id}`)
   return response.json()
