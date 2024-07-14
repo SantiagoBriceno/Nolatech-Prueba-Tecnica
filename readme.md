@@ -27,7 +27,7 @@ Es de resaltar que las validaciones de los campos (Requisito de la prueba técni
 ## RUTAS DE LA API
 
 - **GET** - /api/v1/users - Obtiene todos los usuarios
--**GET** - /api/v1/users/paginated - Obtiene todos los usuarios de forma paginada Ingresando la pagina y la cantidad de usuarios por pagina deseados como queryparam (Ejemplo: /api/v1/users/paginated?page=1&limit=10)
+- **GET** - /api/v1/users/paginated - Obtiene todos los usuarios de forma paginada Ingresando la pagina y la cantidad de usuarios por pagina deseados como queryparam (Ejemplo: /api/v1/users/paginated?page=1&limit=10)
 - **GET** - /api/v1/users/:id - Obtiene un usuario por su ID
 - **POST** - /api/v1/users - Crea un usuario
 - **PUT** - /api/v1/users/:id - Actualiza un usuario por su ID
