@@ -14,7 +14,7 @@ export default function () {
         <form>
           <MyInput id='username' onChange={handleChange} placeholder='Username o Email' type='text' name='username' validation={validationUsername} />
           <MyInput id='password' onChange={handleChange} placeholder='Ingresa tu contraseña' type='password' name='password' validation={validationPassword} />
-          <p className='recuperar'>¿Olvidaste la contraseña / username?</p>
+
           <button type='submit' onClick={handleSubmit} className='btn btn-primary'>Ingresar</button>
         </form>
         <div className='form-footer'>
