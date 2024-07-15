@@ -1,3 +1,2 @@
-const RUTA_API = 'http://localhost:3000/api/v1'
-export const RUTA_USERS = RUTA_API + '/users'
-export const RUTA_LOGIN = RUTA_API + '/login'
+export const RUTA_USERS = import.meta.env.VITE_API_ROUTE + '/users'
+export const RUTA_LOGIN = import.meta.env.VITE_API_ROUTE + '/login'
