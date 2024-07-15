@@ -6,6 +6,7 @@ import EditForm from './EditForm'
 
 export default function () {
   const { users, handleDelete, handleEdit, handleView, user, userView, onOpenView, onOpenEdit, handleCloseView, handleCloseEdit, currentPage, handlePage, totalPages } = useUsers()
+  console.log(users)
   return (
     <div className='container'>
       <div className='card'>
@@ -44,7 +45,7 @@ export default function () {
               <td colSpan='6'>
                 <div className='pagination-btn'>
                   <button id='previous' onClick={handlePage}>Anterior</button>
-                  <span>{currentPage} /{totalPages}</span>
+                  <span>{currentPage} / {totalPages}</span>
                   <button id='next' onClick={handlePage}>Siguiente</button>
                 </div>
               </td>
