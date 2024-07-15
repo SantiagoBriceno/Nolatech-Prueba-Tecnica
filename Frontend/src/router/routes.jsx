@@ -5,8 +5,6 @@ import Header from '../components/partials/Header'
 import RegisterView from '../views/Register.view'
 import UsersView from '../views/Users.view'
 
-import { SesionContextProvider } from '../context/SesionContext'
-
 export const router = createBrowserRouter(
   [
     {
