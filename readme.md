@@ -87,9 +87,26 @@ Una guía paso a paso sobre cómo configurar el entorno de desarrollo e instalar
 
 ```bash
 # paso 5
-# Ejecutar el proyecto
-# npm run start en la raiz del proyecto
+# Ejecutar el proyecto en dos terminales
+
+# TERMINAL 1
+# cd backend
+# npm run start 
+
+# TERMINAL 2
+# cd frontend
+# npm run dev
 ```
+
+## LIVE PREVIEW
+FRONT-END: [https://nolatech-prueba-tecnica-frontend.onrender.com/](https://nolatech-prueba-tecnica-frontend.onrender.com/)
+BACK-END: [https://nolatech-prueba-tecnica.onrender.com/api/v1](https://nolatech-prueba-tecnica.onrender.com/api/v1)
+- **GET** - [/users](https://nolatech-prueba-tecnica.onrender.com/api/v1/users) - Obtiene todos los usuarios
+- **GET** - /users/paginated - Obtiene todos los usuarios de forma paginada Ingresando la pagina y la cantidad de usuarios por pagina deseados como queryparam (Ejemplo: /users/paginated?page=1&limit=10)
+- **GET** - /users/:id - Obtiene un usuario por su ID
+- **POST** - /users - Crea un usuario
+- **PATCH** - /users/:id - Actualiza un usuario por su ID
+- **DELETE** - /users/:id - Elimina un usuario por su ID
 
 ## Construido Con 🛠️
 
