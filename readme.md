@@ -88,7 +88,7 @@ Una guía paso a paso sobre cómo configurar el entorno de desarrollo e instalar
 ```bash
 # paso 5
 # Ejecutar el proyecto
-# npm run dev en la raiz del proyecto
+# npm run start en la raiz del proyecto
 ```
 
 ## Construido Con 🛠️

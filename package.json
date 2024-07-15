@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "back": "node ./Backend/src/index.js",
+    "front": "vite ./Frontend",
+    "start": "concurrently \"npm run back\" \"npm run front\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "standard": "^17.1.0"
+    "concurrently": "^8.2.2",
+    "standard": "^17.1.0",
+    "vite": "^5.3.3"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
