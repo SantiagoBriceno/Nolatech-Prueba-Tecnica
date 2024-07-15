@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import { validateUsername, validatePassword, validateName } from './inputConditions'
 import { createUser } from '../service/user'
+import { useNavigate } from 'react-router-dom'
 
 export const useRegisterUser = () => {
+  const navigate = useNavigate()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [name, setName] = useState('')
@@ -80,7 +82,7 @@ export const useRegisterUser = () => {
           response.json().then((data) => {
             const { message } = data
             window.alert(message)
-            window.location.href = '/login'
+            navigate('/login', { replace: true })
           })
         })
       }

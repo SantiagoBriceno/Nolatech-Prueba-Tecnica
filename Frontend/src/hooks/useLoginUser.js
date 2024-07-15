@@ -6,7 +6,10 @@ import { loginUser } from '../service/authentication'
 
 import { useSesionContext } from '../context/SesionContext'
 
+import { useNavigate } from 'react-router-dom'
+
 export const useLoginUser = () => {
+  const navigate = useNavigate()
   const { login } = useSesionContext()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -43,7 +46,7 @@ export const useLoginUser = () => {
         if (token) {
           login(token)
           window.alert('Usuario logueado correctamente')
-          window.location.href = '/users'
+          navigate('/users', { replace: true })
         } else {
           window.alert(error || message)
         }

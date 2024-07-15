@@ -1,7 +1,9 @@
 import { getUsers, deleteUser, getUser, getPaginatedUsers } from '../service/user'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const useUsers = () => {
+  const navigate = useNavigate()
   const [users, setUsers] = useState([])
   const [user, setUser] = useState()
   const [userView, setUserView] = useState()
@@ -52,7 +54,7 @@ export const useUsers = () => {
       deleteUser(id).then((response) => {
         console.log(response)
         window.alert(response.message)
-        window.location.reload()
+        navigate('/users', { replace: true })
       })
     }
   }

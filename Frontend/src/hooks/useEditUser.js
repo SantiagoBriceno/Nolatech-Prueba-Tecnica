@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import { validateUsername, validatePassword, validateName } from './inputConditions'
 import { verifyPassword, updateUser } from '../service/user'
+import { useNavigate } from 'react-router-dom'
 export const useEditUser = ({ user }) => {
+  const navigate = useNavigate()
   const [changes, setChanges] = useState()
   const [name, setName] = useState()
   const [username, setUsername] = useState()
@@ -70,7 +72,7 @@ export const useEditUser = ({ user }) => {
       if (!oldPassword) {
         console.log(changes)
         updateUser(user.id, changes)
-        window.location.reload()
+        navigate('/users', { replace: true })
       } else {
         const { password } = user
         console.log(password)
@@ -82,7 +84,7 @@ export const useEditUser = ({ user }) => {
             console.log(changes)
             window.alert('Contraseña correcta')
             updateUser(user.id, changes)
-            window.location.reload()
+            navigate('/users', { replace: true })
           } else {
             window.alert('Contraseña incorrecta')
           }
