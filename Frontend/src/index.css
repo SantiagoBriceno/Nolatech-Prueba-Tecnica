@@ -389,11 +389,10 @@ hr {
 }
 
 .fiveCard {
-  margin-top: 15%;
+  margin-top: 2%;
   display: flex;
   flex-direction: row;
   justify-content: end;
-  height: 100%;
 }
 
 .formFiveCard {
