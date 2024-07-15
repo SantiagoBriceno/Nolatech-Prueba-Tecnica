@@ -23,7 +23,6 @@ export const useUsers = () => {
   useEffect(() => {
     getPaginatedUsers(currentPage, pageSize)
       .then((data) => {
-        console.log(data)
         setUsers(data.users)
         setTotalPages(data.totalPages)
       })
