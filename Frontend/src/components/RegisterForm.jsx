@@ -1,6 +1,7 @@
 import MyInput from './Form/MyInput'
 import './Form/MyForm.css'
 import { useRegisterUser } from '../hooks/useRegisterUser'
+import { NavLink } from 'react-router-dom'
 export default function () {
   const { validationUsername, validationPassword, validationName, handleSubmit, handleChange } = useRegisterUser()
   return (
@@ -36,7 +37,7 @@ export default function () {
         </form>
         <div className='form-footer'>
           <p>¿Ya tienes una cuenta? </p>
-          <p><a href='/login'>Inicia Sesión aquí</a></p>
+          <p><NavLink a='/login'>Inicia Sesión aquí</NavLink></p>
 
         </div>
       </div>

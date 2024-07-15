@@ -1,6 +1,7 @@
 import MyInput from './Form/MyInput'
 import './Form/MyForm.css'
 import { useLoginUser } from '../hooks/useLoginUser'
+import { NavLink } from 'react-router-dom'
 export default function () {
   const { validationUsername, validationPassword, handleChange, handleSubmit } = useLoginUser()
   return (
@@ -19,7 +20,7 @@ export default function () {
         </form>
         <div className='form-footer'>
           <p>¿No tienes una cuenta? </p>
-          <p><a href='/register'>Regístrate</a></p>
+          <p><NavLink to='/register'>Regístrate Aquí</NavLink></p>
 
         </div>
       </div>
