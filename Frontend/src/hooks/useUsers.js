@@ -47,11 +47,13 @@ export const useUsers = () => {
     console.log(e.target.id)
     const index = e.target.id.split('-')[1]
     const id = users[index].id
+    console.log(id)
     if (id) {
       deleteUser(id).then((response) => {
         console.log(response)
+        window.alert(response.message)
+        window.location.reload()
       })
-      window.location.reload()
     }
   }
 
