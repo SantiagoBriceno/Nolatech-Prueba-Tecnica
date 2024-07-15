@@ -9,12 +9,132 @@
       "updated_at": "7/14/2024, 6:46:51 PM"
     },
     {
-      "username": "Santiagogbf2000@Gmail.com",
-      "name": "Santiago Gabriel",
-      "password": "$2b$10$GblxNJXmihmUeIvRo8D55OY4j/lss3AtfiAN9t.djrvQ/NmH6lFTK",
-      "id": "e66d080d-1949-4570-a2c1-9524ea69c49f",
-      "created_at": "7/14/2024, 7:22:30 PM",
-      "updated_at": "7/14/2024, 7:24:02 PM"
+      "username": "SofiaGomez",
+      "name": "Sofía Gómez",
+      "password": "$2b$10$9pRUZy7nO9PVoj9eWEm0Cu.mnRMrW/CI8C8txlIVk44gcsbh0JgbS",
+      "id": "43a1f941-9c4e-49c2-8f3d-51f2a3b4c5d6",
+      "created_at": "3/11/2023, 10:23:45 AM",
+      "updated_at": "3/11/2023, 10:23:45 AM"
+    },
+    {
+      "username": "JuanPerez",
+      "name": "Juan Pérez",
+      "password": "$2b$10$eJ8dR9tY3uI2oP1nO9mLk.jiHgFfEeDcBbAaSs",
+      "id": "91f2a3b4-c5d6-43a1-f941-9c4e49c2",
+      "created_at": "9/25/2022, 3:14:15 PM",
+      "updated_at": "9/25/2022, 3:14:15 PM"
+    },
+    {
+      "username": "MariaRodriguez",
+      "name": "María Rodríguez",
+      "password": "$2b$10$GhJkLmN.oPqRsTuVwXyZi.jiHgFfEeDcBbAaSs",
+      "id": "c5d6-43a1-f941-9c4e-49c2-8f3d-51f2a3b4",
+      "created_at": "1/15/2024, 11:45:00 AM",
+      "updated_at": "1/15/2024, 11:45:00 AM"
+    },
+    {
+      "username": "CarlosGarcia",
+      "name": "Carlos García",
+      "password": "$2b$10$RtY.uI2oP1nO9mLk.jiHgFfEeDcBbAaSs",
+      "id": "51f2a3b4-c5d6-43a1-f941-9c4e-49c2-8f3d",
+      "created_at": "6/20/2023, 2:30:00 PM",
+      "updated_at": "6/20/2023, 2:30:00 PM"
+    },
+    {
+      "username": "AnaDiaz",
+      "name": "Ana Díaz",
+      "password": "$2b$10$eJ8dR9tY3uI2oP1nO9mLk.jiHgFfEeDcBbAaSs",
+      "id": "8f3d-51f2a3b4-c5d6-43a1-f941-9c4e-49c2",
+      "created_at": "11/28/2022, 9:00:00 AM",
+      "updated_at": "11/28/2022, 9:00:00 AM"
+    },
+    {
+      "username": "LucasMartinez",
+      "name": "Lucas Martínez",
+      "password": "$2b$10$KlMnOpQrStUvWxYz.jiHgFfEeDcBbAaSs",
+      "id": "23456789-0123-4567-8901-234567890123",
+      "created_at": "4/17/2023, 8:15:00 AM",
+      "updated_at": "4/17/2023, 8:15:00 AM"
+    },
+    {
+      "username": "IsabellaGonzalez",
+      "name": "Isabella González",
+      "password": "$2b$10$RtY.uI2oP1nO9mLk.jiHgFfEeDcBbAaSs",
+      "id": "45678901-2345-6789-0123-456789012345",
+      "created_at": "10/22/2022, 3:45:00 PM",
+      "updated_at": "10/22/2022, 3:45:00 PM"
+    },
+    {
+      "username": "MateoSanchez",
+      "name": "Mateo Sánchez",
+      "password": "$2b$10$eJ8dR9tY3uI2oP1nO9mLk.jiHgFfEeDcBbAaSs",
+      "id": "67890123-4567-8901-2345-678901234567",
+      "created_at": "2/10/2024, 10:00:00 AM",
+      "updated_at": "2/10/2024, 10:00:00 AM"
+    },
+    {
+      "username": "SofiaHernandez",
+      "name": "Sofía Hernández",
+      "password": "$2b$10$GhJkLmN.oPqRsTuVwXyZi.jiHgFfEeDcBbAaSs",
+      "id": "89012345-6789-0123-4567-890123456789",
+      "created_at": "8/15/2023, 2:15:00 PM",
+      "updated_at": "8/15/2023, 2:15:00 PM"
+    },
+    {
+      "username": "JulianPerez",
+      "name": "Julián Pérez",
+      "password": "$2b$10$KlMnOpQrStUvWxYz.jiHgFfEeDcBbAaSs",
+      "id": "01234567-8901-2345-6789-012345678901",
+      "created_at": "5/20/2022, 11:30:00 AM",
+      "updated_at": "5/20/2022, 11:30:00 AM"
+    },
+    {
+      "username": "GabrielaRomero",
+      "name": "Gabriela Romero",
+      "password": "$2b$10$eJ8dR9tY3uI2oP1nO9mLk.jiHgFfEeDcBbAaSs",
+      "id": "34567890-1234-5678-9012-345678909012",
+      "created_at": "12/18/2022, 9:45:00 AM",
+      "updated_at": "12/18/2022, 9:45:00 AM"
+    },
+    {
+      "username": "ValeriaGomez",
+      "name": "Valeria Gómez",
+      "password": "$2b$10$GhJkLmN.oPqRsTuVwXyZi.jiHgFfEeDcBbAaSs",
+      "id": "78901234-5678-9012-3456-789012345678",
+      "created_at": "3/22/2024, 10:30:00 AM",
+      "updated_at": "3/22/2024, 10:30:00 AM"
+    },
+    {
+      "username": "FernandoSanchez",
+      "name": "Fernando Sánchez",
+      "password": "$2b$10$eJ8dR9tY3uI2oP1nO9mLk.jiHgFfEeDcBbAaSs",
+      "id": "01234567-8901-2345-6789-012345678981",
+      "created_at": "6/5/2023, 9:00:00 AM",
+      "updated_at": "6/5/2023, 9:00:00 AM"
+    },
+    {
+      "username": "CristinaRodriguez",
+      "name": "Cristina Rodríguez",
+      "password": "$2b$10$RtY.uI2oP1nO9mLk.jiHgFfEeDcBbAaSs",
+      "id": "23456789-0123-4567-8901-234567890123",
+      "created_at": "9/10/2023, 11:45:00 AM",
+      "updated_at": "9/10/2023, 11:45:00 AM"
+    },
+    {
+      "username": "PabloGarcia",
+      "name": "Pablo García",
+      "password": "$2b$10$GhJkLmN.oPqRsTuVwXyZi.jiHgFfEeDcBbAaSs",
+      "id": "45678901-2345-6789-0123-456789012345",
+      "created_at": "1/15/2024, 2:30:00 PM",
+      "updated_at": "1/15/2024, 2:30:00 PM"
+    },
+    {
+      "username": "AndreaHernandez",
+      "name": "Andrea Hernández",
+      "password": "$2b$10$eJ8dR9tY3uI2oP1nO9mLk.jiHgFfEeDcBbAaSs",
+      "id": "67890123-4567-8901-2345-678901234567",
+      "created_at": "4/2/2023, 10:15:00 AM",
+      "updated_at": "4/2/2023, 10:15:00 AM"
     }
   ]
 }
