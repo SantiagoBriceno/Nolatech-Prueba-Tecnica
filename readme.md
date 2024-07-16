@@ -87,6 +87,13 @@ Una guía paso a paso sobre cómo configurar el entorno de desarrollo e instalar
 
 ```bash
 # paso 5
+# Crear el archivo .env en el frontend y agregar la siguiente variable de entorno
+# cd frontend
+# VITE_API_ROUTE=http://localhost:3000/api/v1
+```
+
+```bash
+# paso 6
 # Ejecutar el proyecto en dos terminales
 
 # TERMINAL 1
